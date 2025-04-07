@@ -1,8 +1,51 @@
-[gd_scene load_steps=5 format=3 uid="uid://bnyug1cd3nwux"]
+[gd_scene load_steps=16 format=3 uid="uid://bnyug1cd3nwux"]
 
 [ext_resource type="Texture2D" uid="uid://67oymcf1cryf" path="res://190383210-el-auto-deportivo-de-carreras-de-fórmula-alcanza-en-el-circuito-de-carreras-la-ilustración-de.jpg" id="1_epypp"]
 [ext_resource type="Script" uid="uid://dpgovc0oh156b" path="res://character_body_2d.gd" id="2_0hol4"]
 [ext_resource type="Texture2D" uid="uid://de03mf25k4nqv" path="res://images-removebg-preview.png" id="3_q6r6c"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_epypp"]
+a = Vector2(81.1684, 13.7554)
+b = Vector2(80.7137, 158.585)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_0hol4"]
+a = Vector2(-49.4513, 37.4011)
+b = Vector2(283.862, 38.7653)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_q6r6c"]
+a = Vector2(283.521, 0.341042)
+b = Vector2(52.5207, -0.113678)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_kdubu"]
+a = Vector2(16.2564, -126.186)
+b = Vector2(267.037, -202.125)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_d21ai"]
+a = Vector2(295.344, -179.389)
+b = Vector2(1.93259, -178.707)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_rj586"]
+b = Vector2(293.752, 0.341034)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_4d7sh"]
+a = Vector2(84.4651, 189.393)
+b = Vector2(332.176, 115.955)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_0h7mo"]
+a = Vector2(78.8948, 17.0522)
+b = Vector2(77.8716, 182.913)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_ir8iy"]
+a = Vector2(318.421, 199.283)
+b = Vector2(85.943, 199.283)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_hqns4"]
+a = Vector2(86.284, 199.624)
+b = Vector2(82.6462, 186.21)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_x0ka3"]
+a = Vector2(-61.6152, 317.284)
+b = Vector2(276.359, 319.331)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kdubu"]
 size = Vector2(116.25, 206.5)
@@ -18,11 +61,54 @@ position = Vector2(261.239, 79.2358)
 scale = Vector2(1.45681, 1.45681)
 texture = ExtResource("1_epypp")
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("SegmentShape2D_epypp")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(174.16, 165.065)
+shape = SubResource("SegmentShape2D_0hol4")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(174.16, 157.789)
+shape = SubResource("SegmentShape2D_q6r6c")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(174.16, 157.789)
+shape = SubResource("SegmentShape2D_kdubu")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(142.897, 134.485)
+shape = SubResource("SegmentShape2D_d21ai")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(143.92, -105.724)
+shape = SubResource("SegmentShape2D_rj586")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(143.92, -105.724)
+shape = SubResource("SegmentShape2D_4d7sh")
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-56.6132, -13.9828)
+shape = SubResource("SegmentShape2D_0h7mo")
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(145.853, -102.54)
+shape = SubResource("SegmentShape2D_ir8iy")
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(145.853, -102.54)
+shape = SubResource("SegmentShape2D_hqns4")
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(182.572, -53.6575)
+shape = SubResource("SegmentShape2D_x0ka3")
+
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 position = Vector2(591, 355)
 script = ExtResource("2_0hol4")
 
-[node name="Images-removebg-preview" type="Sprite2D" parent="CharacterBody2D"]
+[node name="cotxe" type="Sprite2D" parent="CharacterBody2D"]
 position = Vector2(6, 5)
 texture = ExtResource("3_q6r6c")
 
@@ -31,3 +117,9 @@ position = Vector2(8, 10)
 shape = SubResource("RectangleShape2D_kdubu")
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+
+[node name="Label" type="Label" parent="CharacterBody2D"]
+offset_left = -276.0
+offset_top = -219.0
+offset_right = -198.0
+offset_bottom = -140.0
