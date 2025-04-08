@@ -51,6 +51,7 @@ b = Vector2(276.359, 319.331)
 size = Vector2(116.25, 206.5)
 
 [node name="Node2D" type="Node2D"]
+metadata/_edit_vertical_guides_ = [-1988.0]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(119, -499)
@@ -60,6 +61,11 @@ scale = Vector2(8.79653, 8.79653)
 position = Vector2(261.239, 79.2358)
 scale = Vector2(1.45681, 1.45681)
 texture = ExtResource("1_epypp")
+
+[node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2(261.239, 79.2358)
+scale = Vector2(1.45681, 1.45681)
+polygon = PackedVector2Array(-23.7222, 52.8292, -37.0661, 51.3466, -48.381, 44.8697, -57.6671, 36.5201, -65.3145, 22.786, -67.9677, 7.17915, -64.9243, -8.58378, -58.0573, -21.9277, -47.5227, -33.0866, -80.141, -24.1906, -79.8143, -19.8387, -74.2884, 53.7657, -32.7742, 65.0806)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 shape = SubResource("SegmentShape2D_epypp")
@@ -104,6 +110,27 @@ shape = SubResource("SegmentShape2D_hqns4")
 position = Vector2(182.572, -53.6575)
 shape = SubResource("SegmentShape2D_x0ka3")
 
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(12.9597, -12.1639, 21.9405, 2.95571, 10.1176, -7.38928, -0.90945, -34.5591, 8.63977, -54.908, 35.6959, -91.0586, 57.5227, -106.178, 79.9179, -120.388, 101.858, -125.163, 131.074, -119.934, 141.533, -108.907, 129.597, -114.704, 116.523, -119.365, 100.835, -119.365, 87.1935, -116.751, 70.4823, -108.907, 55.3627, -101.063, 43.3125, -92.7639, 31.376, -78.6674, 21.4857, -63.4341, 15.1196, -42.6305, 14.6649, -28.9887)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(437.332, -106.065, 447.336, -113.454, 463.251, -114.363, 479.507, -114.363, 497.128, -105.837, 511.338, -83.442, 512.816, -63.3204, 513.953, -31.4897, 509.292, -9.6629, 492.694, 10.1176, 475.301, 10.9134, 504.858, 22.1678, 532.596, -1.70522, 547.602, -40.9252, 550.785, -86.0567, 510.088, -124.026, 465.638, -132.325, 440.287, -124.026)
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(464.842, 95.8333, 484.282, 85.943, 513.157, 89.0124, 535.211, 104.132, 549.421, 134.257, 557.265, 165.861, 555.105, 200.761, 547.261, 234.865, 531.801, 253.054, 510.201, 268.174, 487.692, 277.268, 465.638, 272.039, 457.453, 266.014, 469.958, 293.639, 572.271, 265.559, 577.387, 116.637, 498.037, 56.2722)
+
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(456.998, 158.017, 463.706, 159.608, 468.594, 162.564, 471.55, 166.543, 475.756, 174.842, 476.324, 181.89, 474.392, 189.393, 470.413, 196.327, 465.07, 201.216, 457.339, 204.399)
+
+[node name="CollisionPolygon2D6" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(80.4863, 13.7554, 85.1472, -1.93258, 94.6964, -17.5069, 106.519, -29.8982, 118.456, -38.4242, 133.689, -44.1083, 146.421, -44.6767)
+
+[node name="CollisionPolygon2D7" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(120.843, 263.058, 98.2206, 277.268, 66.9582, 267.833, 34.218, 242.482, 16.2564, 202.921, 21.2584, 168.476, -16.4838, 202.694, 28.3066, 285.567, 101.176, 296.708)
+
+[node name="CollisionPolygon2D8" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(124.822, 202.353, 114.363, 200.193, 103.905, 193.826, 94.5828, 183.595, 86.0567, 172, 80.2589, 157.562)
+
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 position = Vector2(591, 355)
 script = ExtResource("2_0hol4")
@@ -116,10 +143,17 @@ texture = ExtResource("3_q6r6c")
 position = Vector2(8, 10)
 shape = SubResource("RectangleShape2D_kdubu")
 
-[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+[node name="BlueLabel" type="Label" parent="CharacterBody2D"]
+offset_left = -1041.0
+offset_top = -1012.0
+offset_right = -598.0
+offset_bottom = -827.0
+theme_override_font_sizes/font_size = 80
 
-[node name="Label" type="Label" parent="CharacterBody2D"]
-offset_left = -276.0
-offset_top = -219.0
-offset_right = -198.0
-offset_bottom = -140.0
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+position = Vector2(0, -396)
+ignore_rotation = false
+zoom = Vector2(0.5, 0.5)
+
+[node name="Timer" type="Timer" parent="CharacterBody2D"]
+wait_time = 0.001
